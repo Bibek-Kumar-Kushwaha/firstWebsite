@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    position: absolute;
+    opacity: 0.4;
+    width:100vw;
+    height:100vh;
+    z-index: -1;
+    border-radius: 7px;
+}
+
+header div {
+    background-color: burlywood;
+    display: block;
+}
+
+ div img{
+    width: 80px;
+    height: 79px;
+    z-index: 1;
+    opacity: 1;
+    float: right;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+header div ul li {
+    display: inline-block;
+    padding: 5px 5px 5px 10px;
+    font-size: 20px;
+}
+
+div ul li {
+    display: inline;
+    margin: 10px 5px 5px 10px;
+    text-align: center;
+}
+
+div ul li:hover {
+    color: gray;
+    background-color: bisque;
+    box-shadow: 2px 2px black;
+    border-radius: 5px;
+    color: black;
+    padding: 3px;
+}
+
+/* navigation section  */
+.navbar {
+
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    background-color: coral;
+
+}
+
+navbar ul li {
+    display: inline;
+    margin: 10px 5px 5px 10px;
+    text-decoration: none;
+
+}
+
+navbar ul li a {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+navbar ul li a:hover {
+    color: gray;
+    background-color: bisque;
+    box-shadow: 2px 2px black;
+    border-radius: 5px;
+    color: black;
+    padding: 3px;
+}
+
+/* part of span and paragraph */
+section {
+    position: relative;
+    margin: 15% 10% 2% 5%;
+}
+
+span p:nth-child(1) {
+    font-size: 40px;
+    color: black;
+
+}
+
+span p:nth-child(2) {
+    margin-right: 25%;
+    font-size: 30px;
+    color: #a62626;
+}
+
+/* for contact us */
+section a {
+    text-decoration: none;
+    font-size: 20px;
+    color: yellow;
+    background-color: red;
+    border-radius: 5px;
+    box-shadow: 2px 2px black;
+    padding: 3px;
+    position: absolute;
+    top: 110%;
+}

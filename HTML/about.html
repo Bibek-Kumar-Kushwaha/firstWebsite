@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="\CSS\about.css">
+   
+</head>
+
+<body>
+    <img src="\Image\money.avif">
+    <!-- header -->
+    <header class="header">
+        <h2 class="text">ABOUT</h2>
+    </header>
+
+    <!-- button  -->
+    <div class="button">
+        <button id="closebtn" class="fa-solid fa-times" onclick="closebtn()"></button>
+        <button id="openbtn" class="fa-solid fa-bars" onclick="openbtn()"></button>
+    </div>
+
+      <!-- slide navbar in left size of screen  -->
+      <nav id="slider">
+        <ul class="menu">
+          <li class="fa-solid fa-house"> <a href="\HTML\index.html">Home </a> </li>
+          <li class="fa-solid fa-address-card"> <a href="\HTML\about.html">About</a> </li>
+          <li class="fa-solid fa-phone"> <a href="\HTML\contact.html">Contact</a> </li>
+          <li class="fa-solid fa-diagram-project"> <a href="age_calculator.html">Project </a></li>
+        </ul>
+    </nav>
+
+  <section>
+    <article>
+      <p class="a">
+      <h5 class="text">
+        I Am <font color="red">Bibek Kumar Kushwaha</font> from<font color="purple"> Ramban-5 Godaita,Sarlahi</font>
+      </h5>
+      </p>
+      <p class="b">I am a person who is positive about every aspect of life. There are many things I like to do, to see,
+        and to
+        experience. I like to read, I like to write; I like to think, I like to dream; I like to talk, I like to listen.
+        I like to see the sunrise in the morning, I like to see the moonlight at night; I like to feel the music flowing
+        on my face, I like to smell the wind coming from the ocean. I like to look at the clouds in the sky with a blank
+        mind,
+        I like to do thought experiment when I cannot sleep in the middle of the night. I like flowers in spring, rain
+        in summer,
+        leaves in autumn, and snow in winter. I like to sleep early, I like to get up late; I like to be alone, I like
+        to be
+        surrounded by people. I like country’s peace, I like metropolis’ noise; I like the beautiful west lake in
+        Hangzhou,
+        I like the flat cornfield in Champaign. I like delicious food and comfortable shoes; I like good books and
+        movies.
+        I like the land and the nature, I like people. And, I like to laugh.
+      </p>
+    </article>
+  </section>
+  
+  <footer>
+     <!-- about Education  -->
+     <div class="grid-container">
+    <div class="education"> <h3>EDUCATION</h3> 
+  <span>
+  I am student of CSIT(Computer Science And Information Technology) currently studying in Birendra Multiple Campus, Bhratpur.
+  I compleded Intermediate  from Hetauda School Of Management, Hetauda in 2079 BS.
+  And Also I compleded Schooling From Adhunik Rastriya Secondary School, Hetauda in 2076.
+ </span>
+    </div>
+
+   <!-- about skill   -->
+    <div class="skill"><h3> SKILL</h3>
+    <span>
+    Now I am in learning Phase, I try to learn as much as possible. I have Excellent Knowledge of Graphics-Desigh concepts. And also in 
+    Web-Development. I have good Knowledge in Microsoft office like Excel, MS-Word, PowerPoint etc.
+  </span>
+ </div>
+
+  <!-- about experince  -->
+    <div class="experience"> <h3>EXPERIENCE</h3>
+    <span>
+    I learn computer from class 6, so I have Basic to Adavance Knowledge in computer.
+  </span>
+    </div>
+  </div>
+  </footer>
+  
+
+  <script type="text/javascript">
+
+    function closebtn() {
+        document.getElementById("slider").style.width = "0px";
+    }
+    function openbtn() {
+        document.getElementById("slider").style.width = "120px";
+    }
+    </script>
+
+</body>
+
+</html>

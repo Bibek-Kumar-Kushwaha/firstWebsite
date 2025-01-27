@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+    
+    .tophead{
+    height:65px;
+    background:#197c7d;
+    display:flex;
+    justify-content:space-between;
+    }
+    
+    
+    section{
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    background-image: url(https://i.postimg.cc/SRv9hZWF/christopher-gower-m-HRf-Lhg-ABo-unsplash.jpg);
+    background-color:rgba(255,255,255,0.1);
+    background-size: cover;
+    background-position:bottom;
+    overflow: hidden;
+    margin-top:0px;
+    }
+    
+    .brandlogo{
+    color:#fff;
+    font-size:30px;
+    padding-left:50px;
+    }
+    
+    .menulines{
+    font-size:30px;
+    cursor:pointer;
+    margin-right:50px;
+    color:#fff;
+    }
+    
+    .sidenav{
+    height:100%;
+    width:0px;
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:1;
+    background:yellow;
+    overflow-x:hidden;
+    padding-top:60px;
+    transition:1s;
+    }
+    
+    .sidenav a{
+    text-decoration:none;
+    font-size:20px;
+    color:blue;
+    display:block;
+    padding:30px 0px 30px 30px;
+    }
+    .closebtn{
+    position:relative;
+    top:10px;
+    right:25px;
+    font-size:40px;
+    float:right;
+    }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="\CSS\slidenavbar.css">
+</head>
+
+<body>
+    <img src="\Image\computer.avif">
+    <!-- header -->
+    <header class="header">
+        <h2 class="text">Wel Come On My Webpage</h2>
+    </header>
+
+    <div class="greeting">
+          <span id="text"> </span>
+    </div>
+
+    <!-- button  -->
+    <div class="button">
+        <button id="closebtn" class="fa-solid fa-times" onclick="closebtn()"></button>
+        <button id="openbtn" class="fa-solid fa-bars" onclick="openbtn()"></button>
+    </div>
+
+    <!-- slide navbar in left size of screen  -->
+    <nav id="slider">
+        <ul class="menu">
+            <li class="fa-solid fa-house"> <a href="\HTML\index.html">Home </a> </li>
+            <li class="fa-solid fa-address-card"> <a href="\HTML\about.html">About</a> </li>
+            <li class="fa-solid fa-phone"> <a href="\HTML\contact.html">Contact</a> </li>
+            <li class="fa-solid fa-diagram-project"> <a href="age_calculator.html">Project </a></li>
+        </ul>
+    </nav>
+
+    <!-- greeting text for user -->
+    <section>
+        <p>
+            I want to take a moment to express my gratitude for your presence on this webpage. Your interest and
+            engagement mean a great deal to me, and I hope that the content provided here is valuable to you. Whether
+            you are here to learn something new, connect with others, or simply to explore, I am honored to have you as
+            a visitor.
+        </p>
+        <p>
+            I am here to assist and provide information to the best of my abilities. Please do
+            not hesitate to ask questions, offer feedback, or share your thoughts. Your input is important to me, and it
+            helps me to continually improve and better serve you.
+            Thank you for taking the time to visit this webpage, and I hope that you find it helpful and enjoyable.
+        </p>
+    </section>
+
+    <script type="text/javascript">
+
+        function closebtn() {
+            document.getElementById("slider").style.width = "0px";
+        }
+        function openbtn() {
+            document.getElementById("slider").style.width = "120px";
+        }
+
+      
+    </script>
+
+   <script>
+  
+      
+      let person = prompt("Please Enter your Name!!!", "BIBEK");
+      
+    //   if (person != null) {
+    //     document.getElementById("text").innerHTML = "GOOD MORNING, " + person;
+    //   }
+      
+      var hour,min,sec;
+     setInterval(
+     function(){
+    var now=new Date();
+      hour=now.getHours();
+      min=now.getMinutes();
+      sec=now.getSeconds();
+
+   if(hour>=5 && hour < 12)
+   {
+    document.getElementById("text").innerHTML = "GOOD MORNING, " + person;
+   }
+  else if(hour>=12 && hour<17)
+   {
+    document.getElementById("text").innerHTML = "GOOD AFTERNOON, " + person;
+   }
+  else if(hour>=17 && hour<24)
+   {
+    document.getElementById("text").innerHTML = "GOOD EVENING, " + person;
+   }
+  else
+   {
+    document.getElementById("text").innerHTML = "GOOD MORNING, " + person;
+   }
+
+},1000);
+
+
+    </script>
+
+</body>
+
+</html>

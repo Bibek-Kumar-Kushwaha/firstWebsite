@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="\CSS\age_calculator.css">
+
+    <script src="\JAVASCRIPT\age_calculator.js"></script>
+</head>
+
+<body>
+    <img src="\Image\birthday.avif">
+    <!-- header -->
+    <header class="header">
+        <h2 class="text">AGE CALCULATOR</h2>
+    </header>
+
+    <!-- button  -->
+    <div class="button">
+        <button id="closebtn" class="fa-solid fa-times" onclick="closebtn()"></button>
+        <button id="openbtn" class="fa-solid fa-bars" onclick="openbtn()"></button>
+    </div>
+
+    <!-- slide navbar in left size of screen  -->
+    <nav id="slider">
+        <ul class="menu">
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a href="age_calculator.html" >Age Calculator </a> </li>
+            <li> <a href="meter_interest.html">Meter Interest</a> </li>
+            <li> <a href="analog_clock.html">Analog Clock</a> </li>
+        </ul>
+    </nav>
+
+    <!-- grid-design  -->
+    <form class="form">
+        <div class="grid-container">
+
+            <div class="box3" id="message"> </div>
+            <div class="box">PRIVIOUS</div>
+            <div class="box">CURRENT</div>
+            <div class="box">YEAR</div>
+            <div class="box"><input type="number" id="pyear" placeholder="0000"></div>
+            <div class="box"><input type="number" id="cyear" placeholder="0000"></div>
+            <div class="box">MONTH</div>
+            <div class="box"><input type="number" id="pmonth" placeholder="00"></div>
+            <div class="box"><input type="number" id="cmonth" placeholder="00"></div>
+            <div class="box">DAY</div>
+            <div class="box"><input type="number" id="pday" placeholder="00"></div>
+            <div class="box"><input type="number" id="cday" placeholder="00"></div>
+
+            <div class="box3"></div>
+            <div class="box"><input type="button" value="CLICK ME" onclick="submi()"></div>
+            <div class="box"><input type="reset" value="RESET"></div>
+        </div>
+
+        <div class="grid-container1">
+            <div class="box1" id="year"></div>
+            <div class="box1" id="month"></div>
+            <div class="box1" id="day"></div>
+            <div class="box1">YEAR</div>
+            <div class="box1">MONTH</div>
+            <div class="box1">DAY</div>
+
+        </div>
+
+    </form>
+
+
+
+
+    <script type="text/javascript">
+
+        function closebtn() {
+            document.getElementById("slider").style.width = "0px";
+        }
+        function openbtn() {
+            document.getElementById("slider").style.width = "120px";
+        }
+
+
+    </script>
+</body>
+
+</html>

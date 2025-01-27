@@ -1,0 +1,146 @@
+ *{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+img {
+    position: absolute;
+    z-index: -2;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+}
+/* header  */
+header {
+    justify-content: center;
+    text-align: center;
+    background-color: blue;
+    color: yellow;
+}
+
+/* button  */
+div.button {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+}
+
+.fa-bars,.fa-times {
+    background-color: blue;
+    color: yellow;
+    box-shadow: 2px 2px black;
+    font-size:130%;
+}
+#slider{
+    width: 0px;
+}
+
+nav{
+    position: absolute;
+    display: inline-block;
+    background-color:#00e8ff ;
+    color:#000000;
+    overflow: hidden;
+    z-index: 1;
+    transition: 2s;
+    box-sizing: border-box;
+    border-bottom-right-radius: 40px;
+    box-shadow:2px 2px black;
+} 
+
+nav ul{
+    width: 120px;
+    height: 100%;
+}
+ nav ul li{
+    padding:15px;
+    display: inline-block;
+    font-size:10px;
+}
+nav ul li a{
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+    margin:10px;  
+} 
+nav ul li:hover {
+    color: gray;
+    background-color: rgb(255, 162, 48);
+    box-shadow: 2px 2px black;
+    border-radius: 5px;
+    color: black;
+    padding: 15px;
+}
+/* part if header  */
+header{
+    background-color: rgb(247, 158, 42);
+}
+header div{
+    display:block;
+    text-align: center;
+    font-size:x-large;
+    color: white;
+}
+
+/* part of section  */
+section{
+    margin:3% 3% 3% 3%;
+    font-size: large;
+    text-align: justify;
+    position: relative;
+    z-index:-1;
+}
+
+/* part of footer  */
+footer div{
+    display:block;
+    margin: 3% 3% 3% 3%;
+    position: relative;
+    z-index:-1;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1.2fr 1.1fr 1fr;   
+}
+
+footer div div{
+    display:block;
+    border:2px solid rgb(0, 0, 0);
+   grid-template-columns:1fr 1fr 1fr ;
+   padding: 3px;
+   box-shadow: 2px 2px;
+}
+
+footer div div h3{ 
+    text-align: center;
+    background-color: burlywood;
+    box-shadow: 2px 2px;
+}
+h3:hover{
+    box-shadow: 3px 3px blue;
+    cursor: pointer; 
+}
+span h3:hover{
+    background-color: aqua;
+}
+
+/* text-animation  */
+@keyframes typing{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 100%;
+    }
+}
+.text{
+    overflow: hidden;
+    border-right: 5px solid rgb(255, 255, 255);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: normal;
+    animation-name:typing;
+    animation-duration: 10s;
+    animation-timing-function: steps(500);
+
+}

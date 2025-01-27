@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog clock</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="\CSS\analog_clock.css">
+
+    <script src="\JAVASCRIPT\analog.js"></script>
+</head>
+
+<body>
+    <img src="\Image\clock.avif">
+    <!-- header -->
+    <header class="header">
+        <h2 class="text">ANALOG CLOCK</h2>
+    </header>
+
+    <!-- button  -->
+    <div class="button">
+        <button id="closebtn" class="fa-solid fa-times" onclick="closebtn()"></button>
+        <button id="openbtn" class="fa-solid fa-bars" onclick="openbtn()"></button>
+    </div>
+
+    <!-- slide navbar in left size of screen  -->
+    <nav id="slider">
+        <ul class="menu">
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a href="age_calculator.html">Age Calculator </a> </li>
+            <li> <a href="meter_interest.html">Meter Interest</a> </li>
+            <li> <a href="analog_clock.html" >Analog Clock</a> </li>
+        </ul>
+    </nav>
+
+    <div class="name">
+    <div class="circle" >  
+    <div class="point"> </div>
+    <div class="hour no1">1</div>
+    <div class="hour no2">2</div>
+    <div class="hour no3">3</div>
+    <div class="hour no4">4</div>
+    <div class="hour no5">5</div>
+    <div class="hour no6">6</div>
+    <div class="hour no7">7</div>
+    <div class="hour no8">8</div>
+    <div class="hour no9">9</div>
+    <div class="hour no10">10</div>
+    <div class="hour no11">11</div>
+    <div class="hour no12">12</div>
+    
+    <div class="hour-hand" id="hour"> </div>
+    <div class="min-hand" id="min"> </div>
+    <div class="sec hand" id="sec"> </div>
+    <div id="digital"> </div>
+    </div>
+    </div>
+    
+
+
+    <script type="text/javascript">
+
+        function closebtn() {
+            document.getElementById("slider").style.width = "0px";
+        }
+        function openbtn() {
+            document.getElementById("slider").style.width = "120px";
+        }
+    </script>
+</body>
+
+</html>

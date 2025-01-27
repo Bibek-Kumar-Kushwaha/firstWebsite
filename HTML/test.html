@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Calculator</title>
+</head>
+<body>
+    <select id="computerpratical">
+        <!-- Add options for computer practical grades -->
+        <option value="A+">A+</option>
+        <option value="A">A</option>
+        <option value="B+">B+</option>
+        <option value="B">B</option>
+        <option value="C+">C+</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="NG">NG</option>
+    </select>
+    
+    <button id="calculateButton">Calculate</button>
+
+    <script>
+        var bp; // Declare bp as a global variable
+
+        // Modify the computerGradePratical function to return bp
+        function computerGradePratical() {
+            var selectBox = document.getElementById("computerpratical");
+            if (!selectBox) {
+                // Check if the element exists
+                return null; // Return null if the element doesn't exist
+            }
+
+            var selectValue = selectBox.options[selectBox.selectedIndex].value;
+
+            switch(selectValue) {
+                case "A+":
+                    bp = 4;
+                    break;
+                case "A":
+                    bp = 3.6;
+                    break;
+                case "B+":
+                    bp = 3.2;
+                    break;
+                case "B":
+                    bp = 2.8;
+                    break;
+                case "C+":
+                    bp = 2.4;
+                    break;
+                case "C":
+                    bp = 2;
+                    break;
+                case "D":
+                    bp = 1.6;
+                    break;
+                case "NG":
+                    bp = "NG";
+                    break;
+                default:
+                    bp = null; // Handle unknown cases
+            }
+
+            return bp; // Return the value of bp
+        }
+
+        function abc1() {
+            var bpValue = computerGradePratical();
+            if (bpValue !== null) {
+                alert("Grade Point for Computer Practical: " + bpValue); // Display the value of bp if it's not null
+            } else {
+                alert("Element with ID 'computerpratical' not found or invalid selection.");
+            }
+        }
+
+        // Ensure your code runs after the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            // Call abc1 when the button is clicked
+            document.getElementById("calculateButton").addEventListener("click", abc1);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade System</title>
+    <link rel="stylesheet" href="\css\gradesystem.css">
+    <script src="\JAVASCRIPT\grade.js"></script>
+    <!--<script src="\JAVASCRIPT\test.js"></script>  -->
+</head>
+<body>
+    <form>
+    <table>
+        <tr>
+            <th rowspan="2">SUBJECT</th>
+            <th colspan="2">CRADIT HOUR</th>
+            <th colspan="2">GRADE POINT</th>
+            <th colspan="2">GRADE</th>
+            <th>FINAL GRADE POINT</th>
+            <th>FINAL GRADE</th>
+        </tr>
+        <tr>
+            <th>THEORY</th>
+            <th>PRATICAL</th>
+            <th>THEORY</th>
+            <th>PRATICAL</th>
+            <th>THEORY</th>
+            <th>PRATICAL</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th>NEPALI</th>
+            <td id="nep_ch_thy">2.25</td>
+            <td id="nep_ch_pra">0.75</td>
+            <td id="nep_gp_thy">4</td>
+            <td id="nep_gp_pra">4</td>
+            <td id="nep_gr_thy">
+                <select onchange="nepaliGradeTheory()" id="nepalitheory" >
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td id="nep_gr_pra">
+                <select onchange="nepaliGradePratical()" id="nepalipratical">
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td id="nfgp"></td>
+            <td id="nfg"></td>
+        </tr>
+        <tr>
+            <th>ENGLISH</th>
+            <td id="eng_ch_thy">3</td>
+            <td id="eng_ch_pra">1</td>
+            <td id="eng_gp_thy">4</td>
+            <td id="eng_gp_pra">4</td>
+            <td id="eng_gr_thy">
+                <select onchange="englisgGradeTheory()" id="englishtheory">
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td id="eng_gr_pra">
+                <select  onchange="englishGradePratical()" id="englishpratical">
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td id="efgp"></td>
+            <td id="efg"></td>
+        </tr>
+        <tr>
+            <th>MATH</th>
+            <td id="math_ch_thy">3.75</td>
+            <td id="math_ch_pra">1.25</td>
+            <td id="math_gp_thy">4</td>
+            <td id="math_gp_pra">4</td>
+            <td id="math_gr_thy">
+                <select onchange="mathGradeTheory()" id="maththeory">
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td  id="math_gr_pra">
+                <select onchange="mathGradePratical()" id="mathpratical">
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td id="mfgp"></td>
+            <td id="mfg"></td>
+        </tr>
+        <tr>
+            <th>PHYSICS</th>
+            <td id="phy_ch_thy">3.75</td>
+            <td id="phy_ch_pra">1.25</td>
+            <td id="phy_gp_thy">4</td>
+            <td id="phy_gp_pra">4</td>
+            <td id="phy_gr_thy">
+                <select onchange="physicsGradeTheory()" id="physicstheory">
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td  id="phy_gr_pra">
+                <select onchange="physicsGradePratical()" id="physicspratical">
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td id="pfgp"></td>
+            <td id="pfg"></td>
+        </tr>
+        <tr>
+            <th>CHEMISTRY</th>
+            <td id="che_ch_thy">3.75</td>
+            <td id="che_ch_pra">1.25</td>
+            <td id="che_gp_thy">4</td>
+            <td id="che_gp_pra">4</td>
+            <td id="che_gr_thy">
+                <select onchange="chemistryGradeTheory()" id="chemistrytheory">
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td id="che_gr_pra">
+                <select onchange="chemistryGradePratical()" id="chemistrypratical">
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td id="cfgp"></td>
+            <td id="cfg"></td>
+        </tr><tr>
+            <th>
+                <select id="optional" onchange="subjectSelect()">
+                    <option>Choose Subject</option>
+                    <option value="COMPUTER" >COMPUTER</option>
+                    <option value="BIOLOGY">BIOLOGY</option>
+                </select>
+            </th>
+            <td id="com_ch_thy">2.5</td>
+            <td id="com_ch_pra">2.5</td>
+            <td id="com_gp_thy">4</td>
+            <td id="com_gp_pra">4</td>
+            <td id="com_gr_thy">
+                <select onchange="computerGradeTheory()" id="computertheory">
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td id="com_gr_pra">
+                <select onchange="computerGradePratical()" id="computerpratical">
+                    <option>CHOOSE</option>
+                    <option value="A+">A+</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="NG">NG</option>
+                </select>
+            </td>
+            <td id="bfgp"></td>
+            <td id="bfg"></td>
+        </tr>
+        <th>TOTAL</th>
+        <td id=""></td>
+        <td id=""></td>
+        <td></td>
+        <th id="" colspan="3">GRADE POINT AVERAGE (GPA)</th>
+        <th id="gpa" colspan="2"></th>
+    </tr>
+    </table>
+</form>
+    <button id="calculateButton">Calculate</button>
+</body>
+</html>
